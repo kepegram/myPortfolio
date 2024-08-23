@@ -1,0 +1,11 @@
+.p {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(70, 70, 70);
+  align-items: center;
+  justify-content: center;
+}
+
+.p-title {
+  color: #969696;
+}

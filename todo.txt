@@ -1,0 +1,2 @@
+- add something that tracks mouse movement
+- fix last page not showing active on navbar

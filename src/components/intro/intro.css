@@ -1,0 +1,15 @@
+.i {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.i-name {
+  color: #333;
+}
+
+.i-pronounce {
+  color: #333;
+}

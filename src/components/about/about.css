@@ -1,0 +1,11 @@
+.a {
+  display: flex;
+  height: 100vh;
+  background-color: #c4c4c4;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-title {
+  color: grey;
+}

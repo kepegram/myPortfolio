@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.header .nav-menu a {
+  color: #ffffff;
+}
+
+.header .navbar img {
+  width: 250px;
+  height: auto;
+}
+
+.header .nav-menu {
+  display: flex;
+}
+
+.header .nav-item {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.nav-item .active {
+  padding-bottom: 12px;
+  border-bottom: 3px solid white;
+}
+
+.header .nav-item a:hover {
+  padding-bottom: 12px;
+  border-bottom: 3px solid white;
+}
+
+
