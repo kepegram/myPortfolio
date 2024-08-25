@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
+  max-width: 70%;
   margin: auto;
   height: 100%;
   padding: 0 1rem;
@@ -47,5 +47,3 @@
   padding-bottom: 12px;
   border-bottom: 3px solid white;
 }
-
-

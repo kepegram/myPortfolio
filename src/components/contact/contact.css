@@ -4,8 +4,19 @@
   background-color: black;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .c-title {
   color: #333;
+}
+
+.c-app-imgs {
+  flex-direction: row;
+  display: flex;
+}
+
+.c-apps {
+  height: 8vh;
+  width: 8vh;
 }

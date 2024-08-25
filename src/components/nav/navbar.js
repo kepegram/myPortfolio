@@ -13,12 +13,20 @@ const Navbar = () => {
           smooth={true}
           offset={0}
           duration={500}
+          style={{ cursor: "pointer" }}
         >
           <img src={logo} alt="logo" />
         </Link>
         <ul className="nav-menu active">
           <li className="nav-item">
-            <Link to="intro" spy={true} smooth={true} offset={0} duration={500}>
+            <Link
+              to="intro"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              style={{ cursor: "pointer" }}
+            >
               home
             </Link>
           </li>
@@ -29,6 +37,7 @@ const Navbar = () => {
               smooth={true}
               offset={10}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               about
             </Link>
@@ -40,6 +49,7 @@ const Navbar = () => {
               smooth={true}
               offset={10}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               projects
             </Link>
@@ -49,8 +59,9 @@ const Navbar = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={50}
+              offset={110}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               contact
             </Link>

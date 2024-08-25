@@ -1,11 +1,26 @@
 .p {
   display: flex;
-  height: 105vh;
+  height: 115vh;
   background-color: rgb(70, 70, 70);
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .p-title {
   color: #969696;
+}
+
+.p-list-container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+.p-sub {
+  color: #969696;
+  text-decoration: underline;
 }
