@@ -1,2 +1,4 @@
-- add something that tracks mouse movement
-- design ui for contact page
+- add mouse movement
+- add effect that changes mouse to gmail png when hovering over connect content
+- fix UI for when user is on mobile
+- find better images for project panels

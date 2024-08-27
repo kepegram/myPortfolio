@@ -1,15 +1,11 @@
-import React, { useState } from "react";
-import linkedin from "../../assets/linkedin.png";
-import github from "../../assets/github.png";
+import React from "react";
+import { Grid, Typography } from "@mui/material";
+import AboutData from "../about/aboutData";
 import "./contact.css";
 
 export default function Contact() {
   const url =
     "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kepegram1@gmail.com";
-  const githubUrl = "https://github.com/kepegram";
-  const linkedinUrl = "https://www.linkedin.com/in/kadin-pegram-15982118b/";
-
-  const [hidden, setHidden] = useState(false);
 
   return (
     <div className="c" id="contact">
@@ -19,28 +15,29 @@ export default function Contact() {
         onClick={() => window.open(url, "_blank")}
         style={{ cursor: "pointer" }}
       >
-        {hidden ? "contact" : "connect"}
+        Contact
       </h1>
-      <div
-        className="c-app-imgs"
-        onMouseEnter={() => setHidden(false)}
-        onMouseLeave={() => setHidden(true)}
-      >
-        <img
-          src={linkedin}
-          alt="linkedin"
-          className="c-apps"
-          style={{ cursor: "pointer" }}
-          onClick={() => window.open(linkedinUrl, "_blank")}
-        />
-        <img
-          src={github}
-          alt="github"
-          className="c-apps"
-          style={{ cursor: "pointer" }}
-          onClick={() => window.open(githubUrl, "_blank")}
-        />
-      </div>
+      <Grid item xs={12} lg={5}>
+        <Grid item xs={12}>
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography className="c-info-item">
+                <span>Address: </span> {AboutData.address}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography className="c-info-item">
+                <span>Phone: </span> {AboutData.phone}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography className="c-info-item">
+                <span>E-mail: </span> {AboutData.email}
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 }

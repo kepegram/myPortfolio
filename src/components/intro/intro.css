@@ -4,6 +4,13 @@
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.i-headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
 }
 
 .i-name {
@@ -12,4 +19,22 @@
 
 .i-pronounce {
   color: #333;
+}
+
+.i-title {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.i-app-container {
+  display: flex;
+}
+
+.i-app-icon {
+  font-size: 5vh;
+}
+
+.i-down-arrow {
+  height: 5vh;
 }

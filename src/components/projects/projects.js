@@ -42,7 +42,7 @@ export default function Projects() {
   ];
   return (
     <div className="p" id="projects">
-      <h1 className="p-title">projects</h1>
+      <h1 className="p-title">Projects</h1>
       <ul className="p-list-container">
         {projectsList.map((projectDetails) => (
           <ProjectItem
@@ -58,7 +58,7 @@ export default function Projects() {
         }
         style={{ cursor: "pointer" }}
       >
-        see all
+        See All
       </h2>
     </div>
   );

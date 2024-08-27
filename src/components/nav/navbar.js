@@ -27,7 +27,7 @@ const Navbar = () => {
               duration={500}
               style={{ cursor: "pointer" }}
             >
-              home
+              Home
             </Link>
           </li>
           <li className="nav-item">
@@ -39,7 +39,7 @@ const Navbar = () => {
               duration={500}
               style={{ cursor: "pointer" }}
             >
-              about
+              About
             </Link>
           </li>
           <li className="nav-item">
@@ -51,7 +51,7 @@ const Navbar = () => {
               duration={500}
               style={{ cursor: "pointer" }}
             >
-              projects
+              Projects
             </Link>
           </li>
           <li className="nav-item">
@@ -63,7 +63,7 @@ const Navbar = () => {
               duration={500}
               style={{ cursor: "pointer" }}
             >
-              contact
+              Contact
             </Link>
           </li>
         </ul>
