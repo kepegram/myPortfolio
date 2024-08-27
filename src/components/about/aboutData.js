@@ -16,27 +16,39 @@ const AboutData = {
   email: "kepegram1@gmail.com",
   phone: "(609)-949-3117",
 
-  about:
-    '"When you are not practicing, someone else is getting better". \n -Allen Iverson',
+  quote:
+    '"When you are not practicing, someone else is getting better". -Allen Iverson',
 
   experiences: [
     {
       title: "React Native Developer",
-      date: "Jan 2024 - Present",
+      date: "Jan 2023 - Present",
       description:
-        "",
+        "Used JavaScript/TypeScript to build a mobile SDK from scratch. " +
+        "This SDK allowed for developers to use remote commands to control/monitor various aspects of the car from your myBrand mobile app. " +
+        "To test the functionality, React Native was used to build a test/demo app that utilized our SDK. " +
+        "Also reestablished an old feature (Trusted Device) within a new mono repo. " +
+        "Collaborated with the team and built a “new Trusted Device” from scratch using React Native & TypeScript methodologies working closely with UI teams to match features to Figma diagrams/designs.",
     },
     {
       title: "Software Automation Engineer",
-      date: "Aug 2022 - Jan 2024",
+      date: "Aug 2022 - Present",
       description:
-        "",
+        "Using cucumber, TestNG, and gherkin format, I helped develop an automation test suite to test our mobile app feature (Trusted Device). " +
+        "I ran daily automation tests using Jenkins and monitored/shared results. " +
+        "Created automation scripts using Appium to target application TestIds/locators. " +
+        "Executed bi-weekly regression testing on test cases and provided test results. " +
+        "Utilizing Perfecto, I created/reviewed test results and communicated with the release team regarding bugs and defects found. " +
+        "Using Charles Proxy to mock/overview network traffic to test certain mobile application features.",
     },
     {
       title: "Student Computing Services Manager",
       date: "Aug 2019 - May 2022",
       description:
-        "",
+        "Created shell scripts that check various computer defects such as disk usage and network status. " +
+        "Dual-booted computers to Linux OS to further diagnose found issues. " +
+        "Handled name changes and student terminations in the database. " +
+        "Collaborated with management to install security scripts on all student desktop computers. ",
     },
   ],
 
@@ -77,7 +89,7 @@ const AboutData = {
 
   skills: [
     {
-      title: "FRONT-END",
+      title: "Front-End",
       description: [
         "React",
         "React Native",
@@ -88,15 +100,15 @@ const AboutData = {
       ],
     },
     {
-      title: "BACK-END",
+      title: "Back-End",
       description: ["NodeJS", "Java"],
     },
     {
-      title: "DATABASES",
+      title: "Databases",
       description: ["MySQL", "MongoDB"],
     },
     {
-      title: "SOURCE CONTROL",
+      title: "Source Control",
       description: ["Git", "GitHub"],
     },
   ],

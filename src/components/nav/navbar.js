@@ -47,7 +47,7 @@ const Navbar = () => {
               to="projects"
               spy={true}
               smooth={true}
-              offset={10}
+              offset={30}
               duration={500}
               style={{ cursor: "pointer" }}
             >

@@ -1,7 +1,7 @@
 .c {
   display: flex;
   height: 115vh;
-  background-color: black;
+  background-color: #eeeeee;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -29,6 +29,6 @@
 }
 
 .c-info-item > span {
-  color: white;
+  color: black;
   font-weight: 500;
 }
