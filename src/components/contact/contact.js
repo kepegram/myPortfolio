@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Grid, Typography } from "@mui/material";
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { SERVICE_ID } from "../../keys";
-import { TEMPLATE_ID } from "../../keys";
-import { PUBLIC_KEY } from "../../keys";
+import { SERVICE_ID } from "../../../keys";
+import { TEMPLATE_ID } from "../../../keys";
+import { PUBLIC_KEY } from "../../../keys";
 import AboutData from "../about/aboutData";
 import "./contact.css";
 
