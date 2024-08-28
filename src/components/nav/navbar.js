@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import logo from "../../assets/kp-logo.png";
+import resume from "../../assets/pegram-resume.pdf"; 
 import "./navbar.css";
 
 const Navbar = () => {
@@ -64,6 +65,14 @@ const Navbar = () => {
               style={{ cursor: "pointer" }}
             >
               Contact
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              style={{ cursor: "pointer" }}
+              onClick={() => window.open(resume, "_blank")}
+            >
+              Resume
             </Link>
           </li>
         </ul>

@@ -11,6 +11,12 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
+  transition: ease-in-out 200ms;
+}
+
+.i-headshot:hover {
+  width: 380px;
+  height: 380px;
 }
 
 .i-name {
