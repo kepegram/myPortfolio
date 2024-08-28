@@ -1,4 +1,5 @@
 import ProjectItem from "./items/projectItems";
+import { MdOutlineHorizontalRule } from "react-icons/md";
 import "./project.css";
 
 export default function Projects() {
@@ -35,6 +36,7 @@ export default function Projects() {
   return (
     <div className="p" id="projects">
       <h1 className="p-title">Projects</h1>
+      <MdOutlineHorizontalRule />
       <ul className="p-list-container">
         {projectsList.map((projectDetails) => (
           <ProjectItem

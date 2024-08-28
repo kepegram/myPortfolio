@@ -11,8 +11,7 @@ import { SiCucumber } from "react-icons/si";
 const AboutData = {
   name: "Kadin Pegram",
   title: "Mobile/Web Developer",
-  address: "Austin, Texas",
-  birthday: "August 5, 2000",
+  location: "Austin, Texas",
   email: "kepegram1@gmail.com",
   phone: "(609)-949-3117",
 
@@ -21,7 +20,9 @@ const AboutData = {
 
   experiences: [
     {
+      side: "a-container left",
       title: "React Native Developer",
+      organization: "General Motors",
       date: "Jan 2023 - Present",
       description:
         "Used JavaScript/TypeScript to build a mobile SDK from scratch. " +
@@ -31,7 +32,9 @@ const AboutData = {
         "Collaborated with the team and built a “new Trusted Device” from scratch using React Native & TypeScript methodologies working closely with UI teams to match features to Figma diagrams/designs.",
     },
     {
+      side: "a-container right",
       title: "Software Automation Engineer",
+      organization: "General Motors",
       date: "Aug 2022 - Present",
       description:
         "Using cucumber, TestNG, and gherkin format, I helped develop an automation test suite to test our mobile app feature (Trusted Device). " +
@@ -42,7 +45,9 @@ const AboutData = {
         "Using Charles Proxy to mock/overview network traffic to test certain mobile application features.",
     },
     {
+      side: "a-container left",
       title: "Student Computing Services Manager",
+      organization: "Towson University",
       date: "Aug 2019 - May 2022",
       description:
         "Created shell scripts that check various computer defects such as disk usage and network status. " +
@@ -50,10 +55,8 @@ const AboutData = {
         "Handled name changes and student terminations in the database. " +
         "Collaborated with management to install security scripts on all student desktop computers. ",
     },
-  ],
-
-  educations: [
     {
+      side: "a-container right",
       title: "Towson University",
       date: "Aug 2018 - May 2022",
       description: "Bachelor in Computer Science",

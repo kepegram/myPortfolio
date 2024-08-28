@@ -1,5 +1,5 @@
-- add mouse movement
-- add effect that changes mouse to gmail png when hovering over connect content
 - fix UI for when user is on mobile
 - make skills like a attribute rating layout like in a video game
-- add contact form using email.js
+- add a download resume button
+- make projects section look better lol
+- fix timeline dots overlapping navbar
