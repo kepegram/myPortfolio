@@ -20,6 +20,10 @@
   padding: 0 1rem;
 }
 
+.header .hamburger {
+  visibility: hidden;
+}
+
 .header .nav-menu a {
   color: #ffffff;
 }
@@ -46,4 +50,44 @@
 .header .nav-item a:hover {
   padding-bottom: 12px;
   border-bottom: 3px solid white;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    max-width: 100%;
+    background-color: black;
+  }
+
+  .header .navbar {
+    max-width: 100%;
+  }
+
+  .header .hamburger {
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 90px;
+    flex-direction: column;
+    background-color: black;
+    width: 30%;
+    height: 90vh;
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1.5rem 0;
+  }
+
+  .header .navbar img {
+    width: 150px;
+  }
 }

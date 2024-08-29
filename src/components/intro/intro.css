@@ -15,8 +15,8 @@
 }
 
 .i-headshot:hover {
-  width: 380px;
-  height: 380px;
+  width: 280px;
+  height: 280px;
 }
 
 .i-name {
@@ -71,4 +71,17 @@
 
 .i-return-btn:hover {
   transform: translateY(-5px);
+}
+
+@media screen and (max-width: 600px) {
+  .i-return-btn {
+    position: fixed;
+    left: 85%;
+    bottom: 10px;
+    font-size: 50px;
+    z-index: 1;
+    cursor: pointer;
+    color: #333;
+    transition: ease-in-out 200ms;
+  }
 }

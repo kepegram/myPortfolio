@@ -31,6 +31,22 @@ export default function Intro() {
 
   window.addEventListener("scroll", toggleVisible);
 
+  // to prevent zoom on safari
+  document.addEventListener("gesturestart", function (e) {
+    e.preventDefault();
+    document.body.style.zoom = 0.99;
+  });
+
+  document.addEventListener("gesturechange", function (e) {
+    e.preventDefault();
+    document.body.style.zoom = 0.99;
+  });
+
+  document.addEventListener("gestureend", function (e) {
+    e.preventDefault();
+    document.body.style.zoom = 0.99;
+  });
+
   return (
     <div className="i" id="intro">
       <img src={headshot} alt="kadin-headshot" className="i-headshot" />

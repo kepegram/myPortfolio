@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/kp-logo.png";
-import resume from "../../assets/pegram-resume.pdf"; 
+import resume from "../../assets/pegram-resume.pdf";
 import "./navbar.css";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
+  const closeMenu = () => setClick(false);
+
   return (
     <div className="header">
       <nav className="navbar">
@@ -18,7 +25,14 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" />
         </Link>
-        <ul className="nav-menu active">
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={30} style={{ color: "#ffffff" }} />
+          ) : (
+            <FaBars size={30} style={{ color: "#ffffff" }} />
+          )}
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link
               to="intro"
@@ -27,6 +41,7 @@ const Navbar = () => {
               offset={0}
               duration={500}
               style={{ cursor: "pointer" }}
+              onClick={closeMenu}
             >
               Home
             </Link>
@@ -39,6 +54,7 @@ const Navbar = () => {
               offset={10}
               duration={500}
               style={{ cursor: "pointer" }}
+              onClick={closeMenu}
             >
               About
             </Link>
@@ -51,6 +67,7 @@ const Navbar = () => {
               offset={30}
               duration={500}
               style={{ cursor: "pointer" }}
+              onClick={closeMenu}
             >
               Projects
             </Link>
@@ -63,6 +80,7 @@ const Navbar = () => {
               offset={110}
               duration={500}
               style={{ cursor: "pointer" }}
+              onClick={closeMenu}
             >
               Contact
             </Link>

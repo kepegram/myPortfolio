@@ -63,3 +63,11 @@ textarea {
 textarea:focus {
   border: 3px solid #555;
 }
+
+@media screen and (max-width: 600px) {
+  .c {
+    padding-top: 35vh;
+    height: auto;
+    flex-direction: column;
+  }
+}
