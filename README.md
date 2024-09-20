@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal portfolio website showcasing my projects, skills, and experience as a developer. The site is designed to highlight my work, achievements, and provide an easy way for potential employers or collaborators to get in touch with me.
 
-## Available Scripts
+## Live Site
 
-In the project directory, you can run:
+You can view the live version of the portfolio [here](https://kepegram.github.io/myPortfolio/).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: The portfolio is fully responsive, ensuring a smooth experience on all device sizes.
+- **About Me Section**: Learn more about my background, education, and professional journey.
+- **Skills Section**: A visual representation of my technical skills with progress bars indicating my proficiency.
+- **Projects Section**: A showcase of my completed projects with descriptions and links to the repositories.
+- **Contact Section**: A simple way to get in touch with me via social media links or email.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React.js**: JavaScript library used to build the UI of the portfolio.
+- **CSS3**: Styling for the layout and design, with media queries for responsiveness.
+- **JavaScript**: Interactivity and dynamic elements.
+- **HTML5**: Markup for the structure of the site.
+- **MUI (Material-UI)**: For designing reusable components and ensuring the UI is visually appealing.
+- **EmailJS**: Used for handling contact form submissions and sending emails directly from the website.
+- **GitHub Pages**: Hosting and deployment of the portfolio.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contact
 
-### `npm run build`
+Feel free to connect with me via:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [LinkedIn](https://www.linkedin.com/in/kadin-pegram-15982118b/)
+- [Email](mailto:kepegram1@gmail.com)
