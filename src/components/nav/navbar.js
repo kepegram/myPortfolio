@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/kp-logo.png";
-import resume from "../../assets/pegram-resume.pdf";
+import resume from "../../assets/pegram-resume-new.pdf";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
           className="logo"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-60}
           duration={500}
           style={{ cursor: "pointer" }}
         >
@@ -38,7 +38,7 @@ const Navbar = () => {
               to="intro"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-60}
               duration={500}
               style={{ cursor: "pointer" }}
               onClick={closeMenu}
@@ -51,7 +51,7 @@ const Navbar = () => {
               to="about"
               spy={true}
               smooth={true}
-              offset={10}
+              offset={-60}
               duration={500}
               style={{ cursor: "pointer" }}
               onClick={closeMenu}
@@ -64,7 +64,7 @@ const Navbar = () => {
               to="projects"
               spy={true}
               smooth={true}
-              offset={30}
+              offset={-60}
               duration={500}
               style={{ cursor: "pointer" }}
               onClick={closeMenu}
@@ -77,7 +77,7 @@ const Navbar = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={110}
+              offset={-60}
               duration={500}
               style={{ cursor: "pointer" }}
               onClick={closeMenu}

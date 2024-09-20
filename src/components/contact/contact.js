@@ -55,7 +55,7 @@ export default function Contact() {
       >
         Contact
       </h1>
-      <MdOutlineHorizontalRule />
+      <MdOutlineHorizontalRule color="#007bff" />
       <Grid item xs={12} lg={5}>
         <Grid item xs={12}>
           <Grid container>

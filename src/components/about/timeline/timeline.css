@@ -1,0 +1,167 @@
+/* Base styles */
+.timeline {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #000000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: translateX(-50%) scale(1.2);
+}
+
+.timeline-item:hover .timeline-content {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-date {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.timeline-title {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.timeline-org {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-item.left .timeline-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .timeline {
+    padding-top: 60px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .timeline-dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 10px 0;
+  }
+
+  .timeline-item {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-content {
+    padding: 10px;
+  }
+
+  .timeline-date {
+    font-size: 1.2rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-org {
+    font-size: 1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+}

@@ -1,10 +1,34 @@
+/* Base styles */
 .i {
   display: flex;
-  height: 90vh;
-  background-color: #eeeeee;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  background: url("../../../src/assets/austin-skyline.jpg") no-repeat center
+    center/cover;
+}
+
+.i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.788
+  );
+  z-index: 0;
+}
+
+.i * {
+  position: relative;
+  z-index: 1;
 }
 
 .i-headshot {
@@ -21,15 +45,15 @@
 
 .i-name {
   padding-top: 5px;
-  color: #333;
+  color: #ffffff;
 }
 
 .i-pronounce {
-  color: #333;
+  color: #ffffff;
 }
 
 .i-title {
-  color: #333;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   padding-top: 5px;
@@ -65,7 +89,7 @@
   font-size: 50px;
   z-index: 1;
   cursor: pointer;
-  color: #333;
+  color: #007bff;
   transition: ease-in-out 200ms;
 }
 
@@ -73,6 +97,7 @@
   transform: translateY(-5px);
 }
 
+/* Mobile responsiveness */
 @media screen and (max-width: 600px) {
   .i-return-btn {
     position: fixed;
@@ -81,7 +106,7 @@
     font-size: 50px;
     z-index: 1;
     cursor: pointer;
-    color: #333;
+    color: #007bff;
     transition: ease-in-out 200ms;
   }
 }
