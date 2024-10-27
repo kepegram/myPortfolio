@@ -1,7 +1,7 @@
 /* Base styles */
 .p {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #eeeeee;
   align-items: center;
   justify-content: center;
