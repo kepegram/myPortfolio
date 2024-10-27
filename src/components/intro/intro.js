@@ -4,7 +4,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { IoArrowUpCircleSharp } from "react-icons/io5";
 import down from "../../assets/drop-down-arrow-3.png";
-import headshot from "../../assets/kadin-headshot.jpeg";
 import "./intro.css";
 
 export default function Intro() {
@@ -49,7 +48,7 @@ export default function Intro() {
 
   return (
     <div className="i" id="intro">
-      <img src={headshot} alt="kadin-headshot" className="i-headshot" />
+      
       <h1 className="i-name">Kadin Pegram</h1>
       <p className="i-pronounce">/kāden PEGrəm/</p>
       <p className="i-title">Mobile/Web Developer</p>
@@ -69,7 +68,7 @@ export default function Intro() {
         to="about"
         spy={true}
         smooth={true}
-        offset={10}
+        offset={-90}
         duration={500}
         style={{ cursor: "pointer" }}
       >

@@ -17,30 +17,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    123,
-    255,
-    0.788
-  );
+  background-color: rgba(0, 123, 255, 0.788);
   z-index: 0;
 }
 
 .i * {
   position: relative;
   z-index: 1;
-}
-
-.i-headshot {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  transition: ease-in-out 200ms;
-}
-
-.i-headshot:hover {
-  width: 280px;
-  height: 280px;
 }
 
 .i-name {
