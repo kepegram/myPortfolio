@@ -1,11 +1,12 @@
 /* Base styles */
 .a {
   display: flex;
-  height: 220vh;
+  min-height: 100vh;
   background-color: #eeeeee;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 20px;
 }
 
 .a-title {
@@ -28,6 +29,7 @@
   border-radius: 12px;
   transition: ease-in-out 200ms;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -104,7 +106,7 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .a {
-    height: auto;
+    min-height: auto;
     padding: 20px;
   }
 
