@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/kp-logo.png";
-import resume from "../../assets/2024-pegram-resume.pdf";
+import resume from "../../assets/2024-Kadin-Pegram-Resume.pdf";
 import "./navbar.css";
 
 const Navbar = () => {
