@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/myPortfolio/static/css/main.4174b63f.css",
-    "main.js": "/myPortfolio/static/js/main.8f7734f3.js",
+    "main.js": "/myPortfolio/static/js/main.9c123fa6.js",
     "static/media/kadin-headshot.jpeg": "/myPortfolio/static/media/kadin-headshot.714f62e32f73ea7644fd.jpeg",
     "static/media/austin-skyline.jpg": "/myPortfolio/static/media/austin-skyline.00e3c89277115cab3606.jpg",
-    "static/media/pegram-2024-resume.pdf": "/myPortfolio/static/media/pegram-2024-resume.3750557b2397bcd4decc.pdf",
+    "static/media/2024-pegram-resume.pdf": "/myPortfolio/static/media/2024-pegram-resume.1fa3b0638c73568466ad.pdf",
     "static/media/kp-logo.png": "/myPortfolio/static/media/kp-logo.41f53708ce374b462ba4.png",
     "index.html": "/myPortfolio/index.html",
     "main.4174b63f.css.map": "/myPortfolio/static/css/main.4174b63f.css.map",
-    "main.8f7734f3.js.map": "/myPortfolio/static/js/main.8f7734f3.js.map"
+    "main.9c123fa6.js.map": "/myPortfolio/static/js/main.9c123fa6.js.map"
   },
   "entrypoints": [
     "static/css/main.4174b63f.css",
-    "static/js/main.8f7734f3.js"
+    "static/js/main.9c123fa6.js"
   ]
 }
