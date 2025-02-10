@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from "react";
 import {
   Grid,
   Card,
@@ -6,121 +7,118 @@ import {
   Avatar,
   LinearProgress,
 } from "@mui/material";
-import { MdOutlineHorizontalRule } from "react-icons/md";
 import AboutData from "./aboutData";
 import Timeline from "./timeline/timeline";
-import headshot from "../../assets/kadin-headshot.jpeg";
+import headshot from "../../assets/imgs/kadin-headshot.jpeg";
 import "./about.css";
 
 export default function About() {
+  const skillsRef = useRef(null);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="a" id="about">
-      <h1 className="a-title">About Me</h1>
-      <MdOutlineHorizontalRule color="#007bff" />
-      <p className="a-quote">{AboutData.quote}</p>
+      <div className="a-content">
+        <h1 className="a-title">About Me</h1>
+        <p className="a-quote">{AboutData.quote}</p>
 
-      {/*Profile and Skills Card */}
-      <Grid container justifyContent="center" style={{ marginTop: "20px" }}>
-        <Grid item xs={12} md={8}>
-          <Card className="profile-card">
-            <CardContent>
-              {/* Profile Section */}
-              <Grid container spacing={3} alignItems="center">
-                <Grid item xs={12} md={4}>
-                  <Avatar
-                    alt="Profile Picture"
-                    src={headshot}
-                    sx={{ width: 150, height: 150, margin: "auto" }}
-                  />
+        <Grid
+          container
+          justifyContent="center"
+          spacing={4}
+          className="profile-container"
+        >
+          <Grid item xs={12} md={11} lg={10}>
+            <Card className="profile-card" elevation={3} ref={cardRef}>
+              <CardContent>
+                <Grid container spacing={4} alignItems="center">
+                  <Grid item xs={12} md={4}>
+                    <div className="avatar-container">
+                      <Avatar
+                        alt="Profile Picture"
+                        src={headshot}
+                        className="profile-avatar"
+                        sx={{
+                          width: 200,
+                          height: 200,
+                          margin: "auto",
+                          border: "4px solid rgba(255, 255, 255, 0.1)",
+                          boxShadow: "0 8px 32px rgba(31, 38, 135, 0.2)",
+                        }}
+                      />
+                    </div>
+                  </Grid>
+                  <Grid item xs={12} md={8}>
+                    <div className="profile-content">
+                      <Typography variant="h4" className="profile-name">
+                        {AboutData.name}
+                      </Typography>
+                      <Typography variant="h6" className="profile-info">
+                        {AboutData.title}
+                      </Typography>
+                      <Typography variant="body1" className="profile-about">
+                        I am a passionate developer with experience in building and
+                        maintaining mobile/web applications. I love coding, learning
+                        new technologies, and solving complex problems.
+                      </Typography>
+                    </div>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={8}>
-                  <Typography variant="h5" className="profile-name">
-                    Kadin Pegram
+
+                <div className="skills-section" ref={skillsRef}>
+                  <Typography variant="h5" className="skills-title">
+                    Technical Skills
                   </Typography>
-                  <Typography variant="body1" className="profile-info">
-                    Mobile/Web Developer | JavaScript Enthusiast
-                  </Typography>
-                  <Typography variant="body2" className="profile-about">
-                    I am a passionate developer with experience in building and
-                    maintaining mobile/web applications. I love coding, learning
-                    new technologies, and solving problems.
-                  </Typography>
-                </Grid>
-              </Grid>
-
-              {/* Skills Section */}
-              <div className="skills-section" style={{ marginTop: "20px" }}>
-                <Typography variant="h6" className="skills-title">
-                  Skills
-                </Typography>
-
-                {/* HTML Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="60%"
-                >
-                  HTML
-                </Typography>
-                <LinearProgress variant="determinate" value={60} />
-
-                {/* CSS Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="70%"
-                >
-                  CSS
-                </Typography>
-                <LinearProgress variant="determinate" value={70} />
-
-                {/* JavaScript Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="85%"
-                >
-                  JavaScript
-                </Typography>
-                <LinearProgress variant="determinate" value={85} />
-
-                {/* TypeScript Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="65%"
-                >
-                  TypeScript
-                </Typography>
-                <LinearProgress variant="determinate" value={65} />
-
-                {/* React Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="75%"
-                >
-                  React
-                </Typography>
-                <LinearProgress variant="determinate" value={75} />
-
-                {/* React Native Skill */}
-                <Typography
-                  variant="body2"
-                  className="skill-name"
-                  data-percent="90%"
-                >
-                  React Native
-                </Typography>
-                <LinearProgress variant="determinate" value={90} />
-              </div>
-            </CardContent>
-          </Card>
+                  <Grid container spacing={3}>
+                    {AboutData.skills[0].description.map((skill) => (
+                      <Grid item xs={12} sm={6} key={skill.name}>
+                        <div className="skill-item">
+                          <Typography
+                            variant="body1"
+                            className="skill-name"
+                            data-percent={`${skill.proficiency}%`}
+                          >
+                            {skill.name}
+                          </Typography>
+                          <LinearProgress
+                            variant="determinate"
+                            value={skill.proficiency}
+                            className="skill-progress"
+                          />
+                        </div>
+                      </Grid>
+                    ))}
+                  </Grid>
+                </div>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
 
-      {/* Timeline Section */}
-      <Timeline experiences={AboutData.experiences} />
+        <Timeline experiences={AboutData.experiences} />
+      </div>
     </div>
   );
 }

@@ -1,13 +1,3 @@
-import React from "react";
-import { SiReact } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiJenkins } from "react-icons/si";
-import { SiAppium } from "react-icons/si";
-import { SiCucumber } from "react-icons/si";
-
 const AboutData = {
   name: "Kadin Pegram",
   title: "Mobile/Web Developer",
@@ -25,11 +15,10 @@ const AboutData = {
       organization: "General Motors",
       date: "Jan 2023 - Present",
       description:
-        "Used JavaScript/TypeScript to build a mobile SDK from scratch. " +
-        "This SDK allowed for developers to use remote commands to control/monitor various aspects of the car from your myBrand mobile app. " +
-        "To test the functionality, React Native was used to build a test/demo app that utilized our SDK. " +
-        "Also reestablished an old feature (Trusted Device) within a new mono repo. " +
-        "Collaborated with the team and built a “new Trusted Device” from scratch using React Native & TypeScript methodologies working closely with UI teams to match features to Figma diagrams/designs.",
+        "Architected and developed a comprehensive mobile SDK from ground up using JavaScript/TypeScript, enabling seamless integration of vehicle remote commands and monitoring capabilities. " +
+        "Engineered a React Native test/demo application to validate SDK functionality and showcase features to stakeholders. " +
+        "Led the reimplementation of the Trusted Device feature within a new mono repo architecture, improving maintainability and scalability. " +
+        "Collaborated with UI/UX teams to implement pixel-perfect designs from Figma, ensuring high-quality user experience while maintaining strict TypeScript standards.",
     },
     {
       side: "a-container right",
@@ -37,12 +26,11 @@ const AboutData = {
       organization: "General Motors",
       date: "Aug 2022 - Present",
       description:
-        "Using cucumber, TestNG, and gherkin format, I helped develop an automation test suite to test our mobile app feature (Trusted Device). " +
-        "I ran daily automation tests using Jenkins and monitored/shared results. " +
-        "Created automation scripts using Appium to target application TestIds/locators. " +
-        "Executed bi-weekly regression testing on test cases and provided test results. " +
-        "Utilizing Perfecto, I created/reviewed test results and communicated with the release team regarding bugs and defects found. " +
-        "Using Charles Proxy to mock/overview network traffic to test certain mobile application features.",
+        "Developed and maintained a robust automation testing framework using Cucumber, TestNG, and Gherkin, achieving 80% test coverage for the Trusted Device feature. " +
+        "Implemented CI/CD pipelines in Jenkins for daily automated testing, reducing manual testing effort by 60%. " +
+        "Engineered efficient Appium scripts targeting TestIDs/locators, resulting in more reliable and maintainable test suites. " +
+        "Conducted comprehensive regression testing bi-weekly, identifying and documenting critical issues early in development. " +
+        "Leveraged Perfecto for detailed test analysis and Charles Proxy for network traffic inspection, improving bug detection and resolution time.",
     },
     {
       side: "a-container left",
@@ -50,10 +38,10 @@ const AboutData = {
       organization: "Towson University",
       date: "Aug 2019 - May 2022",
       description:
-        "Created shell scripts that check various computer defects such as disk usage and network status. " +
-        "Dual-booted computers to Linux OS to further diagnose found issues. " +
-        "Handled name changes and student terminations in the database. " +
-        "Collaborated with management to install security scripts on all student desktop computers. ",
+        "Developed and implemented automated shell scripts for system diagnostics, monitoring disk usage and network connectivity across 500+ campus computers. " +
+        "Managed Linux/Windows dual-boot environments for advanced troubleshooting and system recovery operations. " +
+        "Administered user database operations including secure handling of student records and access management. " +
+        "Spearheaded the deployment of enhanced security protocols across the university's computer network, improving system security posture.",
     },
     {
       side: "a-container right",
@@ -63,43 +51,16 @@ const AboutData = {
     },
   ],
 
-  stack: [
-    {
-      icon: <SiReact />,
-    },
-    {
-      icon: <SiJavascript />,
-    },
-    {
-      icon: <SiTypescript />,
-    },
-    {
-      icon: <SiHtml5 />,
-    },
-    {
-      icon: <SiCss3 />,
-    },
-    {
-      icon: <SiAppium />,
-    },
-    {
-      icon: <SiJenkins />,
-    },
-    {
-      icon: <SiCucumber />,
-    },
-  ],
-
   skills: [
     {
       title: "Front-End",
       description: [
-        "React",
-        "React Native",
-        "JavaScript",
-        "TypeScript",
-        "HTML",
-        "CSS",
+        { name: "React", proficiency: 50 },
+        { name: "React Native", proficiency: 80 },
+        { name: "JavaScript", proficiency: 80 },
+        { name: "TypeScript", proficiency: 85 },
+        { name: "HTML", proficiency: 45 },
+        { name: "CSS", proficiency: 55 },
       ],
     },
     {

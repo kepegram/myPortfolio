@@ -1,21 +1,69 @@
+import { useEffect, useRef } from 'react';
 import "./projectItems.css";
 
 const ProjectItem = (props) => {
   const { projectDetails } = props;
   const { description, title, url, icon } = projectDetails;
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <>
-      <li className="project-item-container">
-        <div
-          className="project-item-details-container"
-          onClick={() => window.open(url, "_blank")}
-        >
-          <div className="project-item-icon">{icon}</div>
-          <h1 className="project-item-title">{title}</h1>
-          <h4 className="project-item-description">{description}</h4>
+    <li className="project-card" ref={cardRef}>
+      <div className="project-card-inner" onClick={() => window.open(url, "_blank")}>
+        <div className="project-card-header">
+          <div className="project-icon-container">
+            {icon}
+          </div>
+          <h3 className="project-title">{title}</h3>
         </div>
-      </li>
-    </>
+        <p className="project-description">{description}</p>
+        <div className="project-card-footer">
+          <span className="view-project">
+            View Project
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="16" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </li>
   );
 };
 

@@ -7,21 +7,25 @@ export default function Footer() {
   const linkedinUrl = "https://www.linkedin.com/in/kadin-pegram-15982118b/";
 
   return (
-    <div className="footer">
-      <p className="f-title">2024 Pegram Portfolio</p>
-      <p className="f-subtxt">Designed by Kadin Pegram</p>
-      <div className="i-apps-container">
-        <FaLinkedin
-          className="f-app-icon"
-          style={{ cursor: "pointer" }}
-          onClick={() => window.open(linkedinUrl, "_blank")}
-        />
-        <FaGithubSquare
-          className="f-app-icon"
-          style={{ cursor: "pointer" }}
-          onClick={() => window.open(githubUrl, "_blank")}
-        />
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-text">
+          <p className="f-title">© 2024 Pegram Portfolio</p>
+          <p className="f-subtxt">Designed & Built by Kadin Pegram</p>
+        </div>
+        <div className="social-links">
+          <FaLinkedin
+            className="f-app-icon"
+            onClick={() => window.open(linkedinUrl, "_blank")}
+            aria-label="LinkedIn Profile"
+          />
+          <FaGithubSquare
+            className="f-app-icon"
+            onClick={() => window.open(githubUrl, "_blank")}
+            aria-label="GitHub Profile"
+          />
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }

@@ -1,181 +1,229 @@
 /* Base styles */
 .a {
-  display: flex;
   min-height: 100vh;
-  background-color: #eeeeee;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
+  background: #121212;
+  padding: 60px 20px;
+}
+
+.a-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .a-title {
-  color: #333;
+  color: #ffffff;
   text-align: center;
-  padding-top: 80px;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 .a-quote {
-  color: black;
+  color: #e0e0e0;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 20px 0 40px;
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.profile-container {
+  margin-bottom: 60px !important;
 }
 
 .profile-card {
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  transition: ease-in-out 200ms;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px !important;
+  padding: 40px !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform, box-shadow, opacity;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.profile-card.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .profile-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
 }
 
-.profile-name {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.profile-info {
-  font-size: 1.1rem;
-  text-align: center;
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.profile-about {
-  font-size: 1rem;
-  text-align: center;
-  color: #555;
+.avatar-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
-.avatar {
-  display: block;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+.profile-avatar {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.profile-content {
+  text-align: left;
+}
+
+.profile-name {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.profile-info {
+  font-size: 1.4rem !important;
+  color: #00c6ff !important;
+  margin-bottom: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px;
+}
+
+.profile-about {
+  font-size: 1.1rem !important;
+  color: #e0e0e0 !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.3px;
 }
 
 .skills-section {
-  margin-top: 30px;
+  margin-top: 50px !important;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .skills-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 30px !important;
+  text-align: center;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.skill-item {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, background-color;
+}
+
+.skill-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .skill-name {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 10px;
-}
-
-.MuiLinearProgress-root {
-  height: 10px;
-  border-radius: 5px;
-  background-color: #eee;
-  margin-bottom: 10px;
-}
-
-.MuiLinearProgress-bar {
-  background-color: #797979;
+  font-size: 1.1rem !important;
+  color: #e0e0e0 !important;
+  margin-bottom: 12px !important;
+  font-weight: 500 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .skill-name::before {
   content: attr(data-percent);
-  float: right;
-  color: black;
+  color: #00c6ff;
   font-weight: 600;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .a {
-    min-height: auto;
-    padding: 20px;
-  }
+.MuiLinearProgress-root {
+  height: 10px !important;
+  border-radius: 5px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
 
-  .a-title {
-    padding-top: 40px;
-  }
+.MuiLinearProgress-bar {
+  background: linear-gradient(45deg, #00c6ff, #0072ff) !important;
+  border-radius: 5px !important;
+}
 
-  .profile-card {
-    padding: 15px;
-    max-width: 90%;
-  }
-
-  .profile-name {
-    font-size: 1.5rem;
-  }
-
-  .profile-info {
-    font-size: 1rem;
-  }
-
-  .profile-about {
-    font-size: 0.9rem;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
-
-  .skills-title {
-    font-size: 1.2rem;
-  }
-
-  .skill-name {
-    font-size: 0.9rem;
-  }
-
-  .MuiLinearProgress-root {
-    height: 8px;
+/* Responsive styles */
+@media (max-width: 1600px) {
+  .a-content {
+    max-width: 1600px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
+  .a-content {
+    max-width: 1200px;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 960px) {
+  .a-title {
+    font-size: 2.5rem;
+  }
+
   .profile-name {
-    font-size: 1.2rem;
+    font-size: 2rem !important;
+    text-align: center;
   }
 
   .profile-info {
-    font-size: 0.9rem;
+    text-align: center;
   }
 
   .profile-about {
-    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .a {
+    padding: 40px 15px;
   }
 
-  .avatar {
-    width: 100px;
-    height: 100px;
+  .a-title {
+    font-size: 2rem;
   }
 
-  .skills-title {
+  .a-quote {
     font-size: 1rem;
   }
 
-  .skill-name {
-    font-size: 0.8rem;
+  .profile-card {
+    padding: 20px !important;
   }
 
-  .MuiLinearProgress-root {
-    height: 6px;
+  .skills-section {
+    padding: 20px;
+  }
+
+  .skills-title {
+    font-size: 1.5rem !important;
   }
 }

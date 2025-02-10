@@ -6,8 +6,9 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  background: url("../../../src/assets/austin-skyline.jpg") no-repeat center
+  background: url("../../assets/imgs/austin-skyline.jpg") no-repeat center
     center/cover;
+  text-align: center;
 }
 
 .i::before {
@@ -17,79 +18,239 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 123, 255, 0.788);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 123, 255, 0.95) 0%,
+    rgba(18, 18, 18, 0.95) 100%
+  );
   z-index: 0;
+  backdrop-filter: blur(3px);
 }
 
-.i * {
-  position: relative;
-  z-index: 1;
+.i-content {
+  max-width: 1200px;
+  padding: 0 2rem;
+  animation: fadeIn 1s ease-out;
 }
 
 .i-name {
-  padding-top: 5px;
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
   color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: -0.5px;
 }
 
 .i-pronounce {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
 .i-title {
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding-top: 5px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-.i-app-container {
+.i-apps-container {
   display: flex;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .i-app-icon {
-  font-size: 5vh;
-  transition: ease-in-out 200ms;
-  padding-top: 8px;
+  font-size: 2.8rem;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .i-app-icon:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px) scale(1.1);
+  color: #e6e6e6;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
 }
 
 .i-down-arrow {
-  height: 5vh;
-  transition: ease-in-out 200ms;
-}
-
-.i-down-arrow:hover {
-  transform: translateY(5px);
+  height: 3rem;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+  filter: brightness(0) invert(1);
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards, bounce 2s infinite;
+  animation-delay: 0.9s;
 }
 
 .i-return-btn {
   position: fixed;
-  left: 96%;
-  bottom: 20px;
-  font-size: 50px;
-  z-index: 1;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  font-size: 3.2rem;
+  z-index: 999;
   cursor: pointer;
-  color: #007bff;
-  transition: ease-in-out 200ms;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .i-return-btn:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.1);
+  opacity: 1;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
+}
+
+.i-headshot {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.i-headshot-container:hover .i-headshot {
+  transform: scale(1.2);
+}
+
+/* Add new animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
 }
 
 /* Mobile responsiveness */
-@media screen and (max-width: 600px) {
-  .i-return-btn {
-    position: fixed;
-    left: 85%;
-    bottom: 10px;
-    font-size: 50px;
-    z-index: 1;
-    cursor: pointer;
-    color: #007bff;
-    transition: ease-in-out 200ms;
+@media screen and (max-width: 768px) {
+  .i-name {
+    font-size: 3.5rem;
   }
+
+  .i-title {
+    font-size: 1.8rem;
+  }
+
+  .i-pronounce {
+    font-size: 1.1rem;
+  }
+
+  .i-app-icon {
+    font-size: 2.4rem;
+  }
+
+  .i-return-btn {
+    display: none;
+  }
+
+  .i-headshot {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .i-content {
+    padding: 0 1rem;
+  }
+
+  .i-name {
+    font-size: 2.8rem;
+  }
+
+  .i-title {
+    font-size: 1.5rem;
+  }
+
+  .i-apps-container {
+    gap: 1.5rem;
+  }
+
+  .i-headshot {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.i-name-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.i-headshot-container {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.i-name-container:hover {
+  cursor: none;
+}
+
+.i-name-container:hover .i-name {
+  transform: scale(1.05);
+}
+
+/* Add these rules to ensure content fits within viewport */
+* {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }

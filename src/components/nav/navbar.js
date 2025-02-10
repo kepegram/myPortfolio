@@ -1,18 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../assets/kp-logo.png";
-import resume from "../../assets/2024-Kadin-Pegram-Resume.pdf";
+import resume from "../../assets/resumes/Kadin_Pegram_2025_Resume.pdf";
 import "./navbar.css";
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const closeMenu = () => setClick(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Prevent background scrolling when menu is open
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const navItems = [
+    { to: "intro", text: "Home" },
+    { to: "about", text: "About" },
+    { to: "projects", text: "Projects" },
+    { to: "contact", text: "Contact" },
+  ];
 
   return (
-    <div className="header">
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <nav className="navbar">
         <Link
           to="intro"
@@ -21,81 +51,49 @@ const Navbar = () => {
           smooth={true}
           offset={-60}
           duration={500}
-          style={{ cursor: "pointer" }}
         >
-          <img src={logo} alt="logo" />
+          <span className="logo-text">Pegram</span>
+          <span className="logo-dot"></span>
         </Link>
-        <div className="hamburger" onClick={handleClick}>
-          {click ? (
-            <FaTimes size={30} style={{ color: "#ffffff" }} />
-          ) : (
-            <FaBars size={30} style={{ color: "#ffffff" }} />
-          )}
+
+        <button 
+          className={`hamburger ${isOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <div className={`nav-overlay ${isOpen ? 'active' : ''}`} onClick={closeMenu} />
+        
+        <div className={`nav-drawer ${isOpen ? 'active' : ''}`}>
+          <ul className="nav-menu">
+            {navItems.map((item) => (
+              <li className="nav-item" key={item.to}>
+                <Link
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={500}
+                  activeClass="active"
+                  onClick={closeMenu}
+                  spyThrottle={500}
+                >
+                  {item.text}
+                </Link>
+              </li>
+            ))}
+            <li className="nav-item">
+              <Link onClick={() => window.open(resume, "_blank")}>Resume</Link>
+            </li>
+          </ul>
         </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <Link
-              to="intro"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-              style={{ cursor: "pointer" }}
-              onClick={closeMenu}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-              style={{ cursor: "pointer" }}
-              onClick={closeMenu}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-              style={{ cursor: "pointer" }}
-              onClick={closeMenu}
-            >
-              Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-              style={{ cursor: "pointer" }}
-              onClick={closeMenu}
-            >
-              Contact
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              style={{ cursor: "pointer" }}
-              onClick={() => window.open(resume, "_blank")}
-            >
-              Resume
-            </Link>
-          </li>
-        </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 
