@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaBars, FaTimes } from "react-icons/fa";
 import resume from "../../assets/resumes/Kadin_Pegram_2025_Resume.pdf";
 import "./navbar.css";
 
@@ -20,9 +19,9 @@ const Navbar = () => {
   useEffect(() => {
     // Prevent background scrolling when menu is open
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
   }, [isOpen]);
 
@@ -56,8 +55,8 @@ const Navbar = () => {
           <span className="logo-dot"></span>
         </Link>
 
-        <button 
-          className={`hamburger ${isOpen ? 'active' : ''}`} 
+        <button
+          className={`hamburger ${isOpen ? "active" : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
@@ -67,9 +66,12 @@ const Navbar = () => {
           <span className="hamburger-line"></span>
         </button>
 
-        <div className={`nav-overlay ${isOpen ? 'active' : ''}`} onClick={closeMenu} />
-        
-        <div className={`nav-drawer ${isOpen ? 'active' : ''}`}>
+        <div
+          className={`nav-overlay ${isOpen ? "active" : ""}`}
+          onClick={closeMenu}
+        />
+
+        <div className={`nav-drawer ${isOpen ? "active" : ""}`}>
           <ul className="nav-menu">
             {navItems.map((item) => (
               <li className="nav-item" key={item.to}>
