@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.4174b63f.css",
-    "main.js": "/myPortfolio/static/js/main.d2267dd6.js",
+    "main.css": "/myPortfolio/static/css/main.1772bdf8.css",
+    "main.js": "/myPortfolio/static/js/main.a23f9290.js",
     "static/media/kadin-headshot.jpeg": "/myPortfolio/static/media/kadin-headshot.714f62e32f73ea7644fd.jpeg",
     "static/media/austin-skyline.jpg": "/myPortfolio/static/media/austin-skyline.00e3c89277115cab3606.jpg",
-    "static/media/2024-Kadin-Pegram-Resume.pdf": "/myPortfolio/static/media/2024-Kadin-Pegram-Resume.7c71e0c3fd6e19bf79b0.pdf",
-    "static/media/kp-logo.png": "/myPortfolio/static/media/kp-logo.41f53708ce374b462ba4.png",
+    "static/media/Kadin_Pegram_2025_Resume.pdf": "/myPortfolio/static/media/Kadin_Pegram_2025_Resume.3a5f867b0add01884fe1.pdf",
+    "static/media/gmail.png": "/myPortfolio/static/media/gmail.054c0e0609f68345477a.png",
     "index.html": "/myPortfolio/index.html",
-    "main.4174b63f.css.map": "/myPortfolio/static/css/main.4174b63f.css.map",
-    "main.d2267dd6.js.map": "/myPortfolio/static/js/main.d2267dd6.js.map"
+    "main.1772bdf8.css.map": "/myPortfolio/static/css/main.1772bdf8.css.map",
+    "main.a23f9290.js.map": "/myPortfolio/static/js/main.a23f9290.js.map"
   },
   "entrypoints": [
-    "static/css/main.4174b63f.css",
-    "static/js/main.d2267dd6.js"
+    "static/css/main.1772bdf8.css",
+    "static/js/main.a23f9290.js"
   ]
 }
