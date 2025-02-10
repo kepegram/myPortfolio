@@ -52,7 +52,7 @@
 
 .timeline-content {
   background: rgba(255, 255, 255, 0.05);
-  padding: 30px 40px;
+  padding: 25px 30px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(31, 38, 135, 0.1);
   position: relative;
@@ -113,7 +113,7 @@
 }
 
 .timeline-date {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background: linear-gradient(45deg, #4a90e2, #64b5f6);
   -webkit-background-clip: text;
   background-clip: text;
@@ -125,7 +125,7 @@
 }
 
 .timeline-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 10px;
@@ -133,7 +133,7 @@
 }
 
 .timeline-org {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #e0e0e0;
   margin-bottom: 15px;
   font-weight: 500;
@@ -141,7 +141,7 @@
 }
 
 .timeline-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #b3b3b3;
   line-height: 1.7;
   font-weight: 400;

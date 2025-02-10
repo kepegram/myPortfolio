@@ -2,7 +2,7 @@
 .a {
   min-height: 100vh;
   background: #121212;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .a-content {
@@ -14,9 +14,9 @@
 .a-title {
   color: #ffffff;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   background: linear-gradient(45deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -24,28 +24,16 @@
   letter-spacing: 1px;
 }
 
-.a-quote {
-  color: #e0e0e0;
-  text-align: center;
-  padding: 20px 0 40px;
-  font-style: italic;
-  font-size: 1.2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-}
-
 .profile-container {
-  margin-bottom: 60px !important;
+  margin-bottom: 40px !important;
 }
 
 .profile-card {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px !important;
-  padding: 40px !important;
+  border-radius: 20px !important;
+  padding: 25px !important;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
   will-change: transform, box-shadow, opacity;
   opacity: 0;
@@ -66,7 +54,7 @@
 .avatar-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile-avatar {
@@ -83,9 +71,9 @@
 }
 
 .profile-name {
-  font-size: 2.5rem !important;
+  font-size: 1.8rem !important;
   font-weight: 700 !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 12px !important;
   background: linear-gradient(45deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -94,32 +82,32 @@
 }
 
 .profile-info {
-  font-size: 1.4rem !important;
+  font-size: 1.1rem !important;
   color: #00c6ff !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 15px !important;
   font-weight: 500 !important;
   letter-spacing: 0.5px;
 }
 
 .profile-about {
-  font-size: 1.1rem !important;
+  font-size: 0.95rem !important;
   color: #e0e0e0 !important;
-  line-height: 1.8 !important;
+  line-height: 1.6 !important;
   letter-spacing: 0.3px;
 }
 
 .skills-section {
-  margin-top: 50px !important;
-  padding: 40px;
+  margin-top: 40px !important;
+  padding: 25px;
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .skills-title {
-  font-size: 2rem !important;
+  font-size: 1.4rem !important;
   font-weight: 700 !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 25px !important;
   text-align: center;
   background: linear-gradient(45deg, #00c6ff, #0072ff);
   -webkit-background-clip: text;
@@ -129,9 +117,9 @@
 }
 
 .skill-item {
-  padding: 15px;
+  padding: 12px;
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, background-color;
@@ -143,9 +131,9 @@
 }
 
 .skill-name {
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   color: #e0e0e0 !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 10px !important;
   font-weight: 500 !important;
   display: flex;
   justify-content: space-between;
@@ -189,12 +177,11 @@
   }
 
   .profile-name {
-    font-size: 2rem !important;
-    text-align: center;
+    font-size: 1.6rem !important;
   }
 
   .profile-info {
-    text-align: center;
+    font-size: 1rem !important;
   }
 
   .profile-about {
@@ -204,7 +191,7 @@
 
 @media (max-width: 600px) {
   .a {
-    padding: 40px 15px;
+    padding: 30px 15px;
   }
 
   .a-title {
@@ -224,6 +211,6 @@
   }
 
   .skills-title {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
 }

@@ -19,7 +19,7 @@
 
 .p-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   width: 100%;
 }
 
@@ -27,7 +27,6 @@
   color: #ffffff;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
   background: linear-gradient(to right, #007bff, #00c6ff);

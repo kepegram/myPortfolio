@@ -34,7 +34,7 @@
 }
 
 .i-name {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
   color: #ffffff;
@@ -45,7 +45,7 @@
 
 .i-pronounce {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
   font-style: italic;
   font-weight: 300;
@@ -57,7 +57,7 @@
 
 .i-title {
   color: #ffffff;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
@@ -78,7 +78,7 @@
 }
 
 .i-app-icon {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: white;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
@@ -105,7 +105,7 @@
   position: fixed;
   right: 2.5rem;
   bottom: 2.5rem;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   z-index: 999;
   cursor: pointer;
   color: white;
@@ -121,8 +121,8 @@
 }
 
 .i-headshot {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

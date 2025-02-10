@@ -42,7 +42,6 @@ export default function About() {
     <div className="a" id="about">
       <div className="a-content">
         <h1 className="a-title">About Me</h1>
-        <p className="a-quote">{AboutData.quote}</p>
 
         <Grid
           container
