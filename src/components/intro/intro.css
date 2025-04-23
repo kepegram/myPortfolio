@@ -20,7 +20,7 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0, 123, 255, 0.95) 0%,
+    rgba(42, 42, 42, 0.95) 0%,
     rgba(18, 18, 18, 0.95) 100%
   );
   z-index: 0;
@@ -79,14 +79,14 @@
 
 .i-app-icon {
   font-size: 2.4rem;
-  color: white;
+  color: #ff6b00;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .i-app-icon:hover {
   transform: translateY(-5px) scale(1.1);
-  color: #e6e6e6;
+  color: #ff8533;
   filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -121,8 +121,8 @@
 }
 
 .i-headshot {
-  width: 75px;
-  height: 75px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -195,8 +195,8 @@
   }
 
   .i-headshot {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -218,8 +218,8 @@
   }
 
   .i-headshot {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 }
 

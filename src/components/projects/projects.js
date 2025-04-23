@@ -16,7 +16,7 @@ export default function Projects() {
       description:
         "Jetset is an AI-powered travel app built with React Native and Expo. It features personalized destination suggestions, comprehensive itineraries, and seamless trip planning using Firebase, Gemini API, Google Maps API, and Google Places API.",
       url: "https://github.com/kepegram/Jetset-2.0",
-      icon: <MdFlightTakeoff color="#007bff" />,
+      icon: <MdFlightTakeoff color="#FF6B00" />,
     },
     {
       projectId: 1,
@@ -24,7 +24,7 @@ export default function Projects() {
       description:
         "myYoutubeClone is a React Native appplication that matches the UI of the Youtube application. Download the latest version of Youtube and compare! (Created with RN CLI)",
       url: "https://github.com/kepegram/myYouTubeClone",
-      icon: <MdVideoLibrary color="#007bff" />,
+      icon: <MdVideoLibrary color="#FF6B00" />,
     },
     {
       projectId: 2,
@@ -32,7 +32,7 @@ export default function Projects() {
       description:
         "myCalculator is a React Native appplication that is a real-time weather app. Fetches data from OpenWeather API and presents it to the user  (Created with Expo CLI)",
       url: "https://github.com/kepegram/myWeather",
-      icon: <MdCalculate color="#007bff" />,
+      icon: <MdCalculate color="#FF6B00" />,
     },
     {
       projectId: 3,
@@ -40,7 +40,7 @@ export default function Projects() {
       description:
         "myPorfolio is the site you are browsing now. (Created using React.js)",
       url: "https://kepegram.github.io/myPortfolio/",
-      icon: <MdWeb color="#007bff" />,
+      icon: <MdWeb color="#FF6B00" />,
     },
   ];
 

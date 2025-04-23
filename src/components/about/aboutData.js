@@ -1,19 +1,23 @@
 const AboutData = {
   name: "Kadin Pegram",
-  title: "Mobile/Web Developer",
+  title: "Mobile Engineer",
   location: "Austin, Texas",
   email: "kepegram1@gmail.com",
   phone: "(609)-949-3117",
 
-  quote:
-    '"When you are not practicing, someone else is getting better". -Allen Iverson',
-
   experiences: [
+    {
+      side: "a-container right",
+      title: "Mobile Application Engineer",
+      organization: "Marathon TS",
+      date: "March 2025 - Present",
+      description: "",
+    },
     {
       side: "a-container left",
       title: "React Native Developer",
       organization: "General Motors",
-      date: "Jan 2023 - Present",
+      date: "Jan 2023 - Sep 2024",
       description:
         "Architected and developed a comprehensive mobile SDK from ground up using JavaScript/TypeScript, enabling seamless integration of vehicle remote commands and monitoring capabilities. " +
         "Engineered a React Native test/demo application to validate SDK functionality and showcase features to stakeholders. " +
@@ -24,7 +28,7 @@ const AboutData = {
       side: "a-container right",
       title: "Software Automation Engineer",
       organization: "General Motors",
-      date: "Aug 2022 - Present",
+      date: "Aug 2022 - Sep 2024",
       description:
         "Developed and maintained a robust automation testing framework using Cucumber, TestNG, and Gherkin, achieving 80% test coverage for the Trusted Device feature. " +
         "Implemented CI/CD pipelines in Jenkins for daily automated testing, reducing manual testing effort by 60%. " +
@@ -56,7 +60,7 @@ const AboutData = {
       title: "Front-End",
       description: [
         { name: "React", proficiency: 50 },
-        { name: "React Native", proficiency: 80 },
+        { name: "React Native", proficiency: 90 },
         { name: "JavaScript", proficiency: 80 },
         { name: "TypeScript", proficiency: 85 },
         { name: "HTML", proficiency: 45 },

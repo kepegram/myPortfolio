@@ -29,7 +29,7 @@
   font-weight: 700;
   position: relative;
   display: inline-block;
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #ff6b00, #ff8533);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +46,7 @@
 }
 
 .p-button {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: linear-gradient(135deg, #ff6b00, #ff8533);
   border: none;
   color: white;
   padding: 18px 48px;
@@ -57,12 +57,12 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
 }
 
 .p-button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
 }
 
 .p-button::after {

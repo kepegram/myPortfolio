@@ -47,7 +47,7 @@
 .logo-text {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #007bff 100%);
+  background: linear-gradient(135deg, #fff 0%, #ff6b00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 .logo-dot {
   width: 6px;
   height: 6px;
-  background: #007bff;
+  background: #ff6b00;
   border-radius: 50%;
   display: inline-block;
   margin-left: 2px;
@@ -70,13 +70,13 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
   }
 }
 
@@ -122,7 +122,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #ffb366, #ffc999);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -134,17 +134,17 @@
 }
 
 .header .nav-item a:hover {
-  color: #007bff;
+  color: #ff9d3b;
 }
 
 /* Special styling for Resume button */
 .header .nav-item:last-child a {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: linear-gradient(135deg, #ff6b00, #ff8533);
   padding: 0.8rem 1.6rem;
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
   cursor: pointer;
 }
 
@@ -155,8 +155,8 @@
 .header .nav-item:last-child a:hover {
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
-  background: linear-gradient(135deg, #0056b3, #007bff);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
+  background: linear-gradient(135deg, #ff8533, #ff6b00);
 }
 
 /* Hamburger Menu */
@@ -278,7 +278,7 @@
 
 /* Active state styling */
 .header .nav-item a.active {
-  color: #007bff;
+  color: #ff6b00;
 }
 
 /* Override for intro/home tab to keep it white when active */
@@ -294,13 +294,13 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #ff6b00, #ff8533);
   transform: scaleX(1);
 }
 
 /* Make sure the Resume button doesn't show the underline when active */
 .header .nav-item:last-child a.active {
-  background: linear-gradient(135deg, #0056b3, #007bff);
+  background: linear-gradient(135deg, #ff8533, #ff6b00);
   color: #ffffff;
 }
 

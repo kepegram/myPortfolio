@@ -34,10 +34,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { to: "intro", text: "Home" },
-    { to: "about", text: "About" },
-    { to: "projects", text: "Projects" },
-    { to: "contact", text: "Contact" },
+    { to: "intro", text: "Home", offset: -60 },
+    { to: "about", text: "About", offset: -40 },
+    { to: "projects", text: "Projects", offset: -40 },
+    { to: "contact", text: "Contact", offset: 40 },
   ];
 
   return (
@@ -79,7 +79,7 @@ const Navbar = () => {
                   to={item.to}
                   spy={true}
                   smooth={true}
-                  offset={-60}
+                  offset={item.offset}
                   duration={500}
                   activeClass="active"
                   onClick={closeMenu}

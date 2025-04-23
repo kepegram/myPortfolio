@@ -92,7 +92,7 @@ export default function Intro() {
           )}
         </div>
         <p className="i-pronounce">/kāden PEGrəm/</p>
-        <h2 className="i-title">Mobile & Web Developer</h2>
+        <h2 className="i-title">Mobile Engineer</h2>
         <div className="i-apps-container">
           <FaLinkedin
             className="i-app-icon"
@@ -111,7 +111,7 @@ export default function Intro() {
           to="about"
           spy={true}
           smooth={true}
-          offset={-90}
+          offset={-40}
           duration={500}
           style={{ cursor: "pointer" }}
         >
