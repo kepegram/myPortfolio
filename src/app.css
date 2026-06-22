@@ -1,0 +1,44 @@
+.shell {
+  width: 100%;
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 96px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.section-head h2 {
+  font-family: var(--display);
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.section-head .count {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--meta);
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .shell {
+    padding: 0 22px;
+  }
+  .section {
+    padding: 72px 0;
+  }
+  .section-head h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,93 @@
+:root {
+  --ground: #fbfafc;
+  --ground-sunk: #f3f1f7;
+  --text: #1a1726;
+  --text-soft: #4a4658;
+  --accent: #6d4aff;
+  --accent-soft: #ede9ff;
+  --meta: #6e6a7c;
+  --line: #e7e4ee;
+
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --col: 720px;
+}
+
+[data-theme="dark"] {
+  --ground: #131019;
+  --ground-sunk: #1c1826;
+  --text: #f4f2f9;
+  --text-soft: #b3aec4;
+  --accent: #9d83ff;
+  --accent-soft: #261f3d;
+  --meta: #8b86a0;
+  --line: #2b2638;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body,
+.nav,
+.phone,
+.skill-tags li,
+.contact-form input,
+.contact-form textarea,
+.nav-resume {
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

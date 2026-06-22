@@ -1,76 +1,90 @@
-import ProjectItem from "./items/projectItems";
-import {
-  MdFlightTakeoff,
-  MdVideoLibrary,
-  MdCalculate,
-  MdWeb,
-} from "react-icons/md";
-
+import { FiArrowUpRight } from "react-icons/fi";
 import "./project.css";
 
-export default function Projects() {
-  const projectsList = [
-    {
-      projectId: 0,
-      title: "Jetset",
-      description:
-        "Jetset is an AI-powered travel app built with React Native and Expo. It features personalized destination suggestions, comprehensive itineraries, and seamless trip planning using Firebase, Gemini API, Google Maps API, and Google Places API.",
-      url: "https://github.com/kepegram/Jetset-2.0",
-      icon: <MdFlightTakeoff color="#FF6B00" />,
-    },
-    {
-      projectId: 1,
-      title: "myYoutubeClone",
-      description:
-        "myYoutubeClone is a React Native appplication that matches the UI of the Youtube application. Download the latest version of Youtube and compare! (Created with RN CLI)",
-      url: "https://github.com/kepegram/myYouTubeClone",
-      icon: <MdVideoLibrary color="#FF6B00" />,
-    },
-    {
-      projectId: 2,
-      title: "myWeather",
-      description:
-        "myCalculator is a React Native appplication that is a real-time weather app. Fetches data from OpenWeather API and presents it to the user  (Created with Expo CLI)",
-      url: "https://github.com/kepegram/myWeather",
-      icon: <MdCalculate color="#FF6B00" />,
-    },
-    {
-      projectId: 3,
-      title: "myPorfolio",
-      description:
-        "myPorfolio is the site you are browsing now. (Created using React.js)",
-      url: "https://kepegram.github.io/myPortfolio/",
-      icon: <MdWeb color="#FF6B00" />,
-    },
-  ];
+const projects = [
+  {
+    title: "Jetset",
+    year: "2024",
+    blurb:
+      "An AI travel planner for iOS and Android that turns a destination into a full itinerary, with suggestions from Gemini and maps from Google Places.",
+    stack: ["React Native", "Expo", "Firebase", "Gemini"],
+    url: "https://github.com/kepegram/Jetset-2.0",
+  },
+  {
+    title: "myYouTubeClone",
+    year: "2023",
+    blurb:
+      "A mobile app that rebuilds the YouTube UI pixel for pixel, close enough to hold up next to the real thing.",
+    stack: ["React Native", "RN CLI"],
+    url: "https://github.com/kepegram/myYouTubeClone",
+  },
+  {
+    title: "myWeather",
+    year: "2023",
+    blurb:
+      "A mobile weather app pulling live conditions from the OpenWeather API into a clean forecast view.",
+    stack: ["React Native", "Expo", "OpenWeather"],
+    url: "https://github.com/kepegram/myWeather",
+  },
+  {
+    title: "This site",
+    year: "2025",
+    blurb:
+      "The portfolio you're reading now, a single-page React build with a light and dark theme.",
+    stack: ["React", "EmailJS"],
+    url: "https://github.com/kepegram/myPortfolio",
+  },
+];
 
+export default function Projects() {
   return (
-    <section className="p" id="projects">
-      <div className="p-container">
-        <div className="p-header">
-          <h1 className="p-title">Projects</h1>
-        </div>
-        <ul className="p-list-container">
-          {projectsList.map((projectDetails) => (
-            <ProjectItem
-              key={projectDetails.projectId}
-              projectDetails={projectDetails}
-            />
-          ))}
-        </ul>
-        <button
-          type="button"
-          className="p-button"
-          onClick={() =>
-            window.open(
-              "https://github.com/kepegram?tab=repositories",
-              "_blank"
-            )
-          }
+    <section className="section projects" id="projects">
+      <div className="section-head">
+        <span className="eyebrow">03</span>
+        <h2>Projects</h2>
+        <a
+          className="count count-link"
+          href="https://github.com/kepegram?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
         >
-          See All
-        </button>
+          all repos ↗
+        </a>
       </div>
+
+      <p className="project-lead">
+        Mostly mobile apps built with React Native, shipped to iOS and Android.
+      </p>
+
+      <ul className="project-list">
+        {projects.map((p, i) => (
+          <li key={p.title}>
+            <a className="project" href={p.url} target="_blank" rel="noreferrer">
+              <span className="project-index">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+
+              <div className="project-body">
+                <div className="project-top">
+                  <h3 className="project-title">
+                    {p.title}
+                    <FiArrowUpRight className="project-arrow" aria-hidden />
+                  </h3>
+                  <span className="project-year">{p.year}</span>
+                </div>
+
+                <p className="project-blurb">{p.blurb}</p>
+
+                <ul className="project-stack">
+                  {p.stack.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -1,109 +1,43 @@
 .footer {
-  background-color: #121212;
-  padding: 2rem 0;
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--line);
 }
 
-.footer-content {
-  max-width: 1400px;
-  padding: 0 40px;
+.footer-inner {
+  max-width: var(--col);
   margin: 0 auto;
+  padding: 32px 28px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
-.footer-text {
-  text-align: left;
+.footer-inner p {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--meta);
 }
 
-.f-title {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-.f-subtxt {
-  color: #b3b3b3;
-  font-size: 0.9rem;
-  margin: 0.5rem 0 0 0;
-}
-
-.social-links {
+.footer-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 16px;
 }
 
-.f-app-icon {
-  font-size: 1.8rem;
-  color: #b3b3b3;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.footer-links a {
+  color: var(--meta);
+  font-size: 1.2rem;
+  display: inline-flex;
+  transition: color 0.15s ease;
 }
 
-.f-app-icon:hover {
-  color: #ff6b00;
-  transform: translateY(-2px);
+.footer-links a:hover {
+  color: var(--accent);
 }
 
-/* Responsive design */
-@media screen and (max-width: 1200px) {
-  .footer-content {
-    max-width: 1200px;
-    padding: 0 32px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .footer-content {
-    padding: 0 24px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 0;
-  }
-
-  .footer-content {
+@media (max-width: 600px) {
+  .footer-inner {
+    padding: 28px 22px;
     flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-
-  .footer-text {
-    text-align: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .footer {
-    padding: 1rem 0;
-  }
-
-  .footer-content {
-    padding: 0 16px;
-  }
-
-  .f-title {
-    font-size: 0.9rem;
-  }
-
-  .f-subtxt {
-    font-size: 0.8rem;
-  }
-
-  .social-links {
-    gap: 1rem;
-  }
-
-  .f-app-icon {
-    font-size: 1.5rem;
+    align-items: flex-start;
   }
 }

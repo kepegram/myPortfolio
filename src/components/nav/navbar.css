@@ -1,312 +1,95 @@
-/* Base styles */
-.header {
-  position: fixed;
-  width: 100%;
+.nav {
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
+  z-index: 50;
+  background: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 
-/* Scrolled state */
-.header.scrolled {
-  background: rgba(17, 17, 17, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.header .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1800px;
+.nav-inner {
+  max-width: var(--col);
   margin: 0 auto;
-  padding: 1rem 60px;
-  transition: padding 0.3s ease;
-}
-
-/* Scrolled navbar padding */
-.header.scrolled .navbar {
-  padding: 0.8rem 60px;
-}
-
-.header .logo {
+  padding: 14px 28px;
   display: flex;
   align-items: center;
-  gap: 4px;
-  transition: transform 0.3s ease;
-  text-decoration: none;
-  cursor: pointer;
+  justify-content: space-between;
 }
 
-.header .logo:hover {
-  transform: scale(1.05);
-}
-
-.logo-text {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #ff6b00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  cursor: pointer;
-}
-
-.logo-dot {
-  width: 6px;
-  height: 6px;
-  background: #ff6b00;
-  border-radius: 50%;
-  display: inline-block;
-  margin-left: 2px;
-  animation: pulse 2s infinite;
-  cursor: pointer;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
-  }
-}
-
-.header .navbar img {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.header .nav-menu {
-  display: flex;
-  gap: 3.5rem;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.header .nav-item {
-  position: relative;
-  cursor: pointer;
-}
-
-.header .nav-item a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* New hover effect */
-.header .nav-item a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, #ffb366, #ffc999);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.header .nav-item a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.header .nav-item a:hover {
-  color: #ff9d3b;
-}
-
-/* Special styling for Resume button */
-.header .nav-item:last-child a {
-  background: linear-gradient(135deg, #ff6b00, #ff8533);
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
+.nav-mark {
+  font-family: var(--display);
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2);
-  cursor: pointer;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
-.header .nav-item:last-child a::after {
-  display: none;
+.nav-dot {
+  color: var(--accent);
 }
 
-.header .nav-item:last-child a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
-  background: linear-gradient(135deg, #ff8533, #ff6b00);
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
 }
 
-/* Hamburger Menu */
-.header .hamburger {
-  display: none;
-  border: none;
+.nav-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-soft);
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-resume {
+  font-family: var(--mono);
+  font-size: 0.82rem !important;
+  color: var(--accent) !important;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.nav-resume:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.nav-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 7px;
   background: transparent;
+  color: var(--text-soft);
+  font-size: 1.05rem;
   cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
-.header .hamburger:hover {
-  background: rgba(255, 255, 255, 0.1);
+.nav-theme:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-  .header .navbar {
-    padding: 1rem 24px;
+@media (max-width: 600px) {
+  .nav-inner {
+    padding: 12px 22px;
   }
-
-  .header.scrolled .navbar {
-    padding: 0.8rem 24px;
+  .nav-links {
+    gap: 16px;
   }
-
-  /* Hide all navigation elements on mobile */
-  .header .hamburger,
-  .nav-overlay,
-  .nav-drawer,
-  .nav-menu {
+  .nav-links a:not(.nav-resume):first-of-type {
     display: none;
   }
-
-  /* Keep only the logo visible */
-  .logo-text {
-    font-size: 2rem;
-  }
-
-  .logo-dot {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1400px) {
-  .header .navbar {
-    padding: 1.5rem 60px;
-  }
-
-  .header.scrolled .navbar {
-    padding: 1rem 60px;
-  }
-
-  .header .nav-menu {
-    gap: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .header .navbar {
-    padding: 1.5rem 40px;
-  }
-
-  .header.scrolled .navbar {
-    padding: 1rem 40px;
-  }
-
-  .header .nav-menu {
-    gap: 2rem;
-  }
-}
-
-/* Small screens */
-@media screen and (max-width: 480px) {
-  .header .navbar {
-    padding: 1rem 20px;
-  }
-
-  .header.scrolled .navbar {
-    padding: 0.8rem 20px;
-  }
-
-  .header .navbar img {
-    height: 45px;
-  }
-
-  .header .nav-item a {
-    font-size: 1.1rem;
-  }
-
-  .logo-text {
-    font-size: 1.8rem;
-  }
-
-  .logo-dot {
-    width: 5px;
-    height: 5px;
-  }
-}
-
-/* Animation for mobile menu */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.nav-menu.active {
-  animation: slideIn 0.3s ease-out;
-}
-
-/* Active state styling */
-.header .nav-item a.active {
-  color: #ff6b00;
-}
-
-/* Override for intro/home tab to keep it white when active */
-.header .nav-menu li:first-child a.active {
-  color: #ffffff;
-}
-
-/* Underline effect for active items */
-.header .nav-item a.active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to right, #ff6b00, #ff8533);
-  transform: scaleX(1);
-}
-
-/* Make sure the Resume button doesn't show the underline when active */
-.header .nav-item:last-child a.active {
-  background: linear-gradient(135deg, #ff8533, #ff6b00);
-  color: #ffffff;
-}
-
-/* Add these rules to prevent horizontal scroll */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }

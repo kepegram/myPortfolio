@@ -1,7 +1,7 @@
 const AboutData = {
   name: "Kadin Pegram",
   title: "Mobile Engineer",
-  location: "Austin, Texas",
+  location: "Dallas, Texas",
   email: "kepegram1@gmail.com",
   phone: "(609)-949-3117",
 
