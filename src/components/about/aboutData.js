@@ -9,12 +9,19 @@ const AboutData = {
     {
       side: "a-container right",
       title: "Mobile Application Engineer",
-      organization: "Marathon TS",
-      date: "March 2025 - Present",
+      organization: "Voicd",
+      date: "Aug 2025 - Present",
       description: "",
     },
     {
       side: "a-container left",
+      title: "Mobile Application Engineer",
+      organization: "Marathon TS",
+      date: "March 2025 - Aug 2025",
+      description: "",
+    },
+    {
+      side: "a-container right",
       title: "React Native Developer",
       organization: "General Motors",
       date: "Jan 2023 - Sep 2024",
@@ -25,7 +32,7 @@ const AboutData = {
         "Collaborated with UI/UX teams to implement pixel-perfect designs from Figma, ensuring high-quality user experience while maintaining strict TypeScript standards.",
     },
     {
-      side: "a-container right",
+      side: "a-container left",
       title: "Software Automation Engineer",
       organization: "General Motors",
       date: "Aug 2022 - Sep 2024",
@@ -37,7 +44,7 @@ const AboutData = {
         "Leveraged Perfecto for detailed test analysis and Charles Proxy for network traffic inspection, improving bug detection and resolution time.",
     },
     {
-      side: "a-container left",
+      side: "a-container right",
       title: "Student Computing Services Manager",
       organization: "Towson University",
       date: "Aug 2019 - May 2022",
@@ -48,7 +55,7 @@ const AboutData = {
         "Spearheaded the deployment of enhanced security protocols across the university's computer network, improving system security posture.",
     },
     {
-      side: "a-container right",
+      side: "a-container left",
       title: "Towson University",
       date: "Aug 2018 - May 2022",
       description: "Bachelor in Computer Science",

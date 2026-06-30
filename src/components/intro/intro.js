@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="hero-now">
           <span className="eyebrow">Now</span>
           <p>
-            Mobile Application Engineer at <strong>Marathon TS</strong>
+            Mobile Application Engineer at <strong>Voicd</strong>
           </p>
         </div>
 
